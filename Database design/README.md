@@ -1,10 +1,10 @@
-# Task 2 — Database Design (SQL + MongoDB)
+# Task 2: Database Design (SQL + MongoDB)
 
 Dataset: [Hourly Energy Consumption](https://www.kaggle.com/datasets/robikscube/hourly-energy-consumption) — AEP_hourly.csv
 
 ---
 
-## Folder Structure
+## Foldere Structure
 
 ```
 task2/
@@ -23,7 +23,7 @@ task2/
 
 ## MySQL Setup
 
-### Step 1 — Create the database
+### Step 1= Create the database
 
 Open MySQL Workbench, connect to your local server, then run:
 
@@ -32,15 +32,15 @@ CREATE DATABASE energy_db;
 USE energy_db;
 ```
 
-### Step 2 — Run the schema
+### Step 2: Run the schema
 
 Open `sql/schema.sql` in Workbench and execute it. This creates the 3 tables.
 
-### Step 3 — Load sample data and run queries
+## Step 3: Load sample data and run queries
 
 Open `sql/seed_and_queries.sql` and execute it. This inserts sample rows and runs all 3 queries.
 
-### Step 4 — Load the full dataset (optional)
+### Step 4: Load the full dataset ( not necessary )
 
 Put `AEP_hourly.csv` in the `sql/` folder, then:
 
@@ -53,17 +53,17 @@ Update the password in `load_data.py` before running.
 
 ---
 
-## MongoDB Setup
+## For MongoDB Setup whih is the easiest 
 
-### Step 1 — Start MongoDB
+### Step 1: Start MongoDB
 
 Make sure MongoDB is running locally (default port 27017).
 
-### Step 2 — Run the collection design
+### Step 2: Run the collection design
 
 Open MongoDB Compass, click "Open MongoDB Shell" at the bottom, then paste and run `mongodb/collection_design.js` section by section.
 
-### Step 3 — Load the full dataset (optional)
+### Step 3: Load the full dataset (optional)
 
 Put `AEP_hourly.csv` in the `mongodb/` folder, then:
 

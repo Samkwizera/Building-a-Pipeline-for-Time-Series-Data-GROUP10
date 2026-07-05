@@ -43,7 +43,7 @@ jupyter notebook          # then run the notebooks in order
 
 | Member | Component |
 |--------|-----------|
-| _me_ | Task 1 — preprocessing, EDA, analysis, modeling |
+| Samuel Kwizera Ihimbazwe | Task 1 — preprocessing, EDA, analysis, modeling |
 | _teammate_ | Task 2 — SQL + MongoDB design |
 | _teammate_ | Task 3 — CRUD API |
 | _teammate_ | Task 4 — forecast script |

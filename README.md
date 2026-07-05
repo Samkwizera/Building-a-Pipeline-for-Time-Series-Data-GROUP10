@@ -35,7 +35,7 @@ jupyter notebook          # then run the notebooks in order
   - `01_eda.ipynb` — time range, granularity, missing values, distributions
   - `02_analysis.ipynb` — analytical questions (trend, seasonality, lag effects, moving averages, external correlation)
   - `03_modeling.ipynb` — model, hyperparameter tuning, experiment comparison
-- **Task 2 — SQL + MongoDB design** — _in progress_
+- **Task 2 — SQL + MongoDB design** — I worked with the group on Task 2 of our group assignment where we were required to design and implement two databases out of the Hourly Energy Consumption dataset provided by Kaggle. I made a 3-table relational schema design for MySQL, then drew an ERD, wrote the SQL schema scripts and implemented 3 queries for the latest record, date range filtering, and average consumption by hour. I created a collection for MongoDB that had all the pertinent data associated with a single hourly reading (region, datetime, consumption value, and time breakdown fields), and I wrote those same 3 queries with the MongoDB syntax. Both implementations are structured, documented and suitable to be passed to the teammate working on Task 3, who will develop the API on top of them.
 - **Task 3 — CRUD API** — _in progress_
 - **Task 4 — Forecast script** — _in progress_ (imports `src/preprocessing.py`)
 
@@ -44,6 +44,6 @@ jupyter notebook          # then run the notebooks in order
 | Member | Component |
 |--------|-----------|
 | Samuel Kwizera Ihimbazwe | Task 1 — preprocessing, EDA, analysis, modeling |
-| _teammate_ | Task 2 — SQL + MongoDB design |
+| Kayumba David Pontient | Task 2 — SQL + MongoDB design |
 | _teammate_ | Task 3 — CRUD API |
 | _teammate_ | Task 4 — forecast script |

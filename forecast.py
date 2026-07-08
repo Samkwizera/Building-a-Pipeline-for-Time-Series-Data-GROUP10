@@ -4,7 +4,7 @@ Group 10 -- Hourly Energy Consumption (PJM), https://www.kaggle.com/datasets/rob
 
 What this does, in order (matching the assignment brief exactly):
   1. FETCH   a window of recent readings from Task 3's real API
-             (GET /api/{sql|mongo}/readings/latest and /range).
+             (GET /api/{sql|mongo}/readings/latest and /api/{sql | mongo}/readings/range).
   2. PREPROCESS the fetched readings with the *same* functions Samuel used in
      src/preprocessing.py for Task 1, so serving-time features can never drift
      from training-time features.
@@ -17,7 +17,7 @@ Task 2/3's database only has AEP_hourly.csv loaded (see
 `Database design/sql/load_data.py`), and the API returns whatever's in the DB
 with no region filter. Samuel's original models/pjme_forecaster.joblib was
 trained on PJME, a different series -- so it can't be used against this API.
-We retrained the *same* tuned HistGradientBoostingRegressor, with the exact
+We retrained the *same* tuned HistGradientBoostingRegressor, with the 
 same src/preprocessing.py pipeline, on AEP instead (see aep_forecaster.joblib).
 Mention this in the group report: "Task 4 retrained Task 1's model
 architecture on AEP to match the region actually loaded into the database."

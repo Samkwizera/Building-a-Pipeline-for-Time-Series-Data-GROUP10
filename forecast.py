@@ -31,8 +31,8 @@ Usage:
     # Without the API running, to sanity-check the rest of the pipeline:
     python forecast.py --mock
 
-Task 3's real API contract (from task3/sql_api/routes.py and
-task3/mongo_api/routes.py):
+Task 3's real API contract (from crud_api/sql_api/routes.py and
+crud_api/mongo_api/routes.py):
 
     GET {api_base}/api/{backend}/readings/latest
         -> {"id": 1, "region_name": "AEP", "datetime": "2018-01-02T03:00:00",

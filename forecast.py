@@ -163,7 +163,7 @@ def forecast_next_hour(feature_row: pd.DataFrame, model, features: list[str]) ->
 # CLI
 # --------------------------------------------------------------------------- #
 def main():
-    parser = argparse.ArgumentParser(description="Task 4: forecast the next hour of PJME demand.")
+    parser = argparse.ArgumentParser(description="Task 4: forecast the next hour of AEP demand.")
     parser.add_argument("--api-base", default="http://127.0.0.1:8000", help="Task 3 API base URL")
     parser.add_argument("--backend", choices=["sql", "mongo"], default="sql", help="which Task 3 backend to hit")
     parser.add_argument("--region", default="AEP", help="region code (must match the trained model's target)")

@@ -55,8 +55,10 @@ set MONGO_URI=mongodb://localhost:27017/
 uvicorn main:app --reload
 # docs at http://127.0.0.1:8000/docs
 ```
-Task 4 – Prediction/Forecast 
-This  closes the loop on the pipeline by fetching live data from Task 3's API, rather than reading straight from a CSV. It calls GET /api/mongo/readings/latest and /range to pull the last two weeks of AEP hourly readings, then rebuilds the exact same lag (1h, 24h, 168h) and rolling-window (24h, 168h) features used in Task 1, using the shared src/preprocessing.py module so training and serving preprocessing never drift apart. It loads a trained HistGradientBoostingRegressor and outputs a forecast for the next hour. Note: since Task 2/3's database was seeded with AEP data rather than PJME, the model architecture from Task 1 was retrained on AEP to stay consistent with the live database (test RMSE ≈ 163 MW).
+Task 4 – Prediction/Forecast Script
+
+
+This  closes the loop in the pipeline by fetching live data from Task 3's API rather than reading directly from a CSV. It calls GET /api/mongo/readings/latest and /range to pull the last two weeks of AEP hourly readings, then rebuilds the same lag (1h, 24h, 168h) and rolling-window (24h, 168h) features used in Task 1, using the shared src/preprocessing.py module so training and serving preprocessing never drift apart. It loads a trained HistGradientBoostingRegressor and outputs a forecast for the next hour. Note: since Task 2/3's database was seeded with AEP data rather than PJME, the model architecture from Task 1 was retrained on AEP to stay consistent with the live database (test RMSE ≈ 163 MW).
 ## Team
 
 | Member | Component |
@@ -64,4 +66,4 @@ This  closes the loop on the pipeline by fetching live data from Task 3's API, r
 | Samuel Kwizera Ihimbazwe | Task 1 — preprocessing, EDA, analysis, modeling |
 | Kayumba David Pontient| Task 2 — SQL + MongoDB design |
 | Alliane Umutoniwase | Task 3 — CRUD API |
-|  | Task 4 — forecast script |
+| Carla Batoni | Task 4 — Prediction/forecast script |
